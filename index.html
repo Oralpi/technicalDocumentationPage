@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta charset="UTF-8">
+  <title>기술 문서 페이지</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<nav id="navbar">
+  <header>HTML</header>
+  <ul>
+    <li><a class="nav-link" href="#general_outline">개요</a></li>
+    <li>
+      <a class="nav-link" href="#basic_structure">기본 구조</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#text_related">텍스트 관련</a>
+    </li>
+    <li><a class="nav-link" href="#related_to_the_list">목록 관련</a></li>
+    <li><a class="nav-link" href="#link_image_related">링크, 이미지 관련</a></li>
+    <li>
+      <a class="nav-link" href="#table_related">테이블 관련</a>
+    </li>
+    <li><a class="nav-link" href="#form">폼</a></li>
+    <li><a class="nav-link" href="#multimedia">멀티미디어</a></li>
+    <li><a class="nav-link" href="#inserting_an_external_page">외부 페이지 삽입</a></li>
+    <li><a class="nav-link" href="#frame">프레임</a></li>
+    <li>
+      <a class="nav-link" href="#etc">기타</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#semantic_tag">시맨틱 태그</a>
+    </li>
+    <li><a class="nav-link" href="#poor_tag">지원이 부실한 태그</a></li>
+    <li><a class="nav-link" href="#not_recommend_tag">비권장 태그</a></li>
+    <li><a class="nav-link" href="#reference">참조</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="general_outline">
+    <header>개요</header>
+    <article>
+      <p>
+        HTML은 웹 브라우저마다 지원하는 태그가 조금씩 다르며, 같은 태그라도 작동하는 방법이 다르지만 대체로 비슷한 태그를 지원한다.
+      </p>
+      <p>
+        W3C HTML 및 WHATWG HTML Living Standard 각각의 최신 버전을 기준으로 하며, 한 쪽이 지원하지 않는 경우는 이를 표시한다.
+      </p>
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="basic_structure">
+    <header>기본 구조</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;!DOCTYPE&gt;</code>: 마크업 언어용 DTD 태그이다.
+        </li>
+        <li>
+          <code>&lt;html&gt;</code>: 위의 DTD를 제외한 전체를 이 태그로 둘러싼다.
+        </li>
+        <li>
+          <code>&lt;head&gt;</code>: HTML 문서의 속성을 지정하기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;body&gt;</code>: HTML 문서의 본 모양을 나타내기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;title&gt;</code>: HTML의 제목을 선언하는 태그.
+        </li>
+        <li>
+          <code>&lt;meta&gt;</code>: HTML의 부가 정보를 선언하는 태그.
+        </li>
+        <li>
+          <code>&lt;link&gt;</code>: 별도의 CSS 선언 파일, 파비콘 등을 연결하는 태그.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="text_related">
+    <header>텍스트 관련</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;hgroup&gt;</code>: 제목 태그(<code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>)를 그룹으로 묶기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;h[1 - 6]&gt;</code>: 제목(heading)을 표시할 때 사용된다.
+        </li>
+        <li>
+          <code>&lt;p&gt;</code>: 새 문단(paragraph)을 연다.
+        </li>
+        <li>
+          <code>&lt;b&gt;</code>: 두껍게(bold) 효과를 준다.
+        </li>
+        <li>
+          <code>&lt;i&gt;</code>: 텍스트를 기울임꼴(italic)로 표시한다.
+        </li>
+        <li>
+          <code>&lt;string&gt;</code>: 포함된 텍스트를 강하게 강조할 때 사용한다.
+        </li>
+        <li>
+          <code>&lt;em&gt;</code>: <code>&lt;strong&gt;</code> 보다 약한 강조를 나타낼 때 사용한다.
+        </li>
+        <li>
+          <code>&lt;ins&gt;</code>: 문서에 삽입(insert)된 텍스트, 즉 밑줄을 표시한다.
+        </li>
+        <li>
+          <code>&lt;del&gt;</code>: 문서에서 삭제(delete)된 텍스트, 즉 취소선을 표시한다.
+        </li>
+        <li>
+          <code>&lt;s&gt;</code>: 취소선을 표시한다.
+        </li>
+        <li>
+          <code>&lt;u&gt;</code>: 밑줄을 표시한다.
+        </li>
+        <li>
+          <code>&lt;sup&gt;</code>: 텍스트를 위첨자(superscript)로 표시한다.
+        </li>
+        <li>
+          <code>&lt;sub&gt;</code>: 텍스트를 아래첨자(subscript)로 표시한다.
+        </li>
+        <li>
+          <code>&lt;small&gt;</code>: 텍스트를 조금 더 작게 표시한다.
+        </li>
+        <li>
+          <code>&lt;br&gt;</code>: 문단 내 줄바꿈(line break).
+        </li>
+        <li>
+          <code>&lt;hr&gt;</code>: 가로줄(horizontal rule)을 넣는다.
+        </li>
+        <li>
+          <code>&lt;abbr&gt;</code>: 약어를 이 태그로 묶어서 무엇의 약어인지 설명하기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;wbr&gt;</code>: 글이 길어질 때 띄어쓰기가 없더라도 이 태그가 쓰인 부분에서 자동개행이 이루어진다.
+        </li>
+        <li>
+          <code>&lt;blockquote&gt;</code>: 인용구를 기술하는 태그이다.
+        </li>
+        <li>
+          <code>&lt;q&gt;</code>: <code>&lt;blockquote&gt;</code>의 인라인 버전.
+        </li>
+        <li>
+          <code>&lt;dfn&gt;</code>: 후술할 <code>&lt;dl&gt;</code>의 인라인 버전.
+        </li>
+        <li>
+          <code>&lt;pre&gt;</code>: 서식 있는(Preformatted) 텍스트를 넣기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;var&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;code&gt;</code>: 변수 등 프로그래밍 언어와의 연계를 위한 태그.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="related_to_the_list">
+    <header>목록 관련</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;ul&gt;</code>: 순서 없는 목록(unordered list)을 표시한다.
+        </li>
+        <li>
+          <code>&lt;li&gt;</code>: 목록에서 각 항목(list item)은 <code>&lt;li&gt;</code>와 <code>&lt;/li&gt;</code> 사이에 넣는다.
+        </li>
+        <li>
+          <code>&lt;ol&gt;</code>: 순서 있는 목록(ordered list)을 표시한다.
+        </li>
+        <li>
+          <code>&lt;dl&gt;</code>: 정의 목록(definition list)을 표시한다.
+        </li>
+        <li>
+          <code>&lt;dt&gt;</code>: 정의 목록의 정의(definition term)를 기술한다.
+        </li>
+        <li>
+          <code>&lt;dd&gt;</code>: 정의 목록의 뜻풀이(definition description)를 기술한다. 
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="link_image_related">
+    <header>링크, 이미지 관련</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;a&gt;</code>: 하이퍼링크를 생성하는 태그이다.
+        </li>
+        <li>
+          <code>&lt;img&gt;</code>: 페이지에 이미지를 추가하는 태그이다.
+        </li>
+        <li>
+          <code>&lt;svg&gt;</code>: 페이지에 SVG 형식의 그래픽을 추가하는 태그이다.
+        </li>
+        <li>
+          <code>&lt;progress&gt;</code>: 페이지에 진행 상황 막대를 추가하는 태그이다.
+        </li>
+        <li>
+          <code>&lt;picture&gt;</code>: 최신 HTML Living Standard에 추가된 이미지 태그로 <code>&lt;audio&gt;</code> 태그와 <code>&lt;video&gt;</code> 태그에 대응한다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="table_related">
+    <header>테이블 관련</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;table&gt;</code>: 테이블을 만드는 태그이다.
+        </li>
+        <li>
+          <code>&lt;tr&gt;</code>: 행(table row)을 시작한다.
+        </li>
+        <li>
+          <code>&lt;td&gt;</code>: 표의 내용(table data), 셀을 표현한다.
+        </li>
+        <li>
+          <code>&lt;th&gt;</code>: 테이블의 행, 열의 머리말(table heading)을 나타낸다.
+        </li>
+        <li>
+          colspan, rowspan속성으로 셀을 병합할 수 있다.
+        </li>
+        <li>
+          <code>&lt;caption&gt;</code>: 테이블의 제목을 기술한다.
+        </li>
+        <li>
+          <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code>: 테이블 상단에 넣어 테이블의 열 정보를 기술한다.
+        </li>
+        <li>
+          <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>: 테이블의 세부 구조를 기술한다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="form">
+    <header>폼</header>
+    <article>
+      <p>
+        CGI(PHP, ASP, JSP 등)와 상호작용하기 위해 입력값을 받는 역할을 한다.
+      </p>
+      <ul>
+        <li>
+          <code>&lt;form&gt;</code>: 입력값을 받는 영역을 지정한다.
+        </li>
+        <li>
+          <code>&lt;input&gt;</code>: 입력값 요소를 지정한다.
+        </li>
+        <li>
+          <code>&lt;textarea&gt;</code>: 여러 줄의 문자열 값을 받는다.
+        </li>
+        <li>
+          <code>&lt;button&gt;</code>: <code>&lt;input type="button"&gt;</code>와 대동소이하다.
+        </li>
+        <li>
+          <code>&lt;output&gt;</code>: input 태그처럼 입력값이지만 수정할 수 없다.
+        </li>
+        <li>
+          <code>&lt;datalist&gt;</code>: 검색어에 들어갈 목록을 지정한다.
+        </li>
+        <li>
+          <code>&lt;select&gt;</code>: 선택 목록.
+        </li>
+        <li>
+          <code>&lt;fieldset&gt;</code>: 폼 요소를 그룹으로 묶어준다.
+        </li>
+        <li>
+          <code>&lt;label&gt;</code>: 해당 요소의 이름을 지정한다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="multimedia">
+    <header>멀티미디어</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;video&gt;</code>: 비디오 재생.
+        </li>
+        <li>
+          <code>&lt;audio&gt;</code>: 오디오 재생.
+        </li>
+        <li>
+          <code>&lt;canvas&gt;</code>: 스크립트를 통해 그래픽을 그리는 데 사용될 수 있다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="inserting_an_external_page">
+    <header>외부 페이지 삽입</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>: 웹 페이지 또는 외부 프로그램을 임베드한다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="frame">
+    <header>프레임</header>
+    <article>
+      <p>
+        <code>&lt;iframe&gt;</code> 외 다른 frame 태그는 HTML5에서 폐기하기로 하였다.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="etc">
+    <header>기타</header>
+    <article>
+      <ul>
+        <li>
+          <code>&lt;base&gt;</code>: 상대 링크(relative link) 해석의 기준이 되는 URL을 지정한다.
+        </li>
+        <li>
+          <code>&lt;style&gt;</code>: CSS 사용.
+        </li>
+        <li>
+          <code>&lt;script&gt;</code>: 스크립트를 사용한다.
+        </li>
+        <li>
+          <code>&lt;div&gt;</code>: 박스 또는 레이어.
+        </li>
+        <li>
+          <code>&lt;span&gt;</code>: <code>&lt;div&gt;</code>의 인라인 버전.
+        </li>
+        <li>
+          <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>: 그림이 덧붙여지는 내용 작성에 사용한다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="semantic_tag">
+    <header>시맨틱 태그</header>
+    <article>
+      <p>
+        HTML5에서 추가된 태그들이다. 디자인을 할 때 <code>&lt;table&gt;</code> 대신 <code>&lt;div&gt;</code>를 쓸 것을 권장했더니 그 부작용으로 코드가 온통 <code>&lt;div&gt;</code> 투성이라 알아보기 어렵다는 지적이 있었다. 그래서 HTML5에서 나온 것이 시맨틱 태그이다.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="poor_tag">
+    <header>지원이 부실한 태그</header>
+    <article>
+      <p>
+        이 분류에는 지원이 부실한 태그를 넣는다.
+      </p>
+      <ul>
+        <li>
+          <code>&lt;dialog&gt;</code>: 다이얼로그 상자를 위한 태그이다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="not_recommend_tag">
+    <header>비권장 태그</header>
+    <article>
+      <p>
+        사용하지 않는 것이 권장되는 태그. 이 분류에는 많이 사용하였지만, HTML5에서 제거된 태그 등이 들어간다. 앞으로의 홈페이지 제작에서는 사용하지 않는 것을 추천한다.
+      </p>
+      <ul>
+        <li>
+          <code>&lt;acronym&gt;</code>: 두문자어에 대한 설명을 넣기 위한 태그이다.
+        </li>
+        <li>
+          <code>&lt;applet&gt;</code>: Java Applet을 넣기 위한 태그이다. 
+        </li>
+        <li>
+          <code>&lt;basefont&gt;</code>: 페이지의 기본 글꼴을 지정한다.
+        </li>
+        <li>
+          <code>&lt;big&gt;</code>: 글꼴 크기를 상대적으로 크게 한다.
+        </li>
+        <li>
+          <code>&lt;center&gt;</code>: 글자를 가운데 정렬한다.
+        </li>
+        <li>
+          <code>&lt;dir&gt;</code>: 디렉터리 목록을 만들기 위한 태그로 안에 <code>&lt;li&gt;</code> 태그를 넣어 사용한다.
+        </li>
+        <li>
+          <code>&lt;font&gt;</code>: 글꼴 특성을 지정한다.
+        </li>
+        <li>
+          <code>&lt;isindex&gt;</code>: 색인 페이지에 검색창을 넣는다.
+        </li>
+        <li>
+          <code>&lt;strike&gt;</code>: 취소선을 긋는다.
+        </li>
+        <li>
+          <code>&lt;tt&gt;</code>: 텔레타이프 글꼴로 한다.
+        </li>
+        <li>
+          <code>&lt;blink&gt;</code>: 넷스케이프에서 글자를 깜빡이게 하는 비표준 태그였다.
+        </li>
+        <li>
+          <code>&lt;bgsound&gt;</code>: 배경음악을 넣는 태그이다.
+        </li>
+        <li>
+          <code>&lt;marquee&gt;</code>: 글자를 화면 위에 흐르게 한다.
+        </li>
+        <li>
+          <code>&lt;multicol&gt;</code>: 글을 다단으로 표시되게 한다.
+        </li>
+        <li>
+          <code>&lt;nobr&gt;</code>: 이 태그 안에서는 줄바꿈이 되지 않는다.
+        </li>
+        <li>
+          <code>&lt;noembed&gt;</code>: 위의 <code>&lt;noframe&gt;</code>처럼 <code>&lt;embed&gt;</code> 태그를 지원하지 않는 브라우저에서 메시지를 대신 표시하도록 하는 태그였다.
+        </li>
+        <li>
+          <code>&lt;xmp&gt;</code>: 이 태그 안에 들어간 텍스트는 보통 텍스트(plain text)로 변하여 안의 태그가 무시된다.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="reference">
+    <header>참조</header>
+    <article>
+      <p>
+        모든 문서는 이 사이트에서 가져왔습니다:
+        <a href="https://namu.wiki/w/HTML/%ED%83%9C%EA%B7%B8"
+            target="_blank">나무위키</a>
+      </p>
+    </article>
+  </section>
+</main>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
